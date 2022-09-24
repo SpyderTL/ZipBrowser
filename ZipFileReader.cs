@@ -72,6 +72,8 @@ namespace ZipBrowser
 				entry.FileComment = Encoding.ASCII.GetString(File.Contents, address + 46 + entry.FileNameLength + entry.ExtraFieldLength, entry.FileCommentLength);
 
 				directory.Add(entry);
+
+				address += 46 + entry.FileNameLength + entry.ExtraFieldLength + entry.FileCommentLength;
 			}
 
 			ZipFile.Directory = directory.ToArray();

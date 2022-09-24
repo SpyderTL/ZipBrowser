@@ -8,7 +8,7 @@
 		{
 			ApplicationConfiguration.Initialize();
 
-			FileReader.Read("../../../Examples/Test.zip");
+			FileReader.Read("../../../Examples/Projects.zip");
 
 			ZipFileReader.Read();
 
@@ -97,7 +97,7 @@
 
 		private static void CreateNodes()
 		{
-			var root = Form.TreeView.Nodes.Add("Test.zip");
+			var root = Form.TreeView.Nodes.Add("Projects.zip");
 			root.Name = "root";
 
 			var filesNode = root.Nodes.Add("Files");
